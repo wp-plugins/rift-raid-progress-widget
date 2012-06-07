@@ -1,0 +1,11 @@
+#tooltip
+{ 
+	display:none; 
+	position:absolute; 
+	z-index:1000; 
+	background-color:#000;
+	color:#FFF; 
+	padding:4px; 
+	box-shadow:#333 1px 1px 3px; 
+	white-space:nowrap;
+}
