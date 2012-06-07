@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: admin, raid, rift, progress, widget
 Requires at least: 2.6
 Tested up to: 3.3.2
-Stable tag: 1.1
+Stable tag: 1.11
 License: The MIT License
 License URI: http://www.opensource.org/licenses/mit-license.php
 
@@ -71,19 +71,23 @@ I'll add more when i get ask questions ^_^.
 1. Screenshot of the widget in action.
 2. Another Screenshot of the widget in action on a different theme.
 3. Settings screen.
-4. Tooltips.
 
 == Upgrade Notice ==
 
 Just install the lastest plugin, nothing special here.
 
 == Changelog ==
-**June 5, 2012 - v1.0
-- Initial release
+**June 6, 2012 - v1.11
+- Fixed word wrap on small browser size
 
 **June 6, 2012 - v1.1
 - Huge code clean up
 - Released on WP Plugins
+
+**June 5, 2012 - v1.0
+- Initial release
+
+
 
 == Mod Images / Css Tooltip ==
 To change the images, you'll just need to change the images in images folder.
