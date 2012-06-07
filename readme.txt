@@ -15,19 +15,20 @@ Rift Raid Progress Widget is a raid progress tracking widget.
 An easy way to show your raid progress in rift on your wordpress page.
 
 Features:
-- Generates images on the fly from the base image.
-- Easy to use.
-- Images can be modified.
-- Tooltip popups with the raid progress.
+	1. Generates images on the fly from the base image.
+	2. Easy to use.
+	3. Images can be modified.
+	4. Tooltip popups with the raid progress.
 
 Todo:
-- Only update images that need to be.
-- Selected what bosses you have killed instead of assuming normal kill order.
-- Check bounds of numbers entered in settings.
+	1. Only update images that need to be.
+	2. Selected what bosses you have killed instead of assuming normal kill order.
+	3. Check bounds of numbers entered in settings.
 
 == Installation ==
-## Needs the php gd library with libpng
-## Needs at least php5.3
+Important!
+1.Needs the php gd library with libpng
+2.Needs at least php5.3
 
 You'll need to set a font file for the plugin to use. You have 2 options,
 either use one of the system fonts or upload your own with the plugin.
