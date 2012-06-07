@@ -71,6 +71,7 @@ I'll add more when i get ask questions ^_^.
 1. Screenshot of the widget in action.
 2. Another Screenshot of the widget in action on a different theme.
 3. Settings screen.
+4. Tooltips.
 
 == Upgrade Notice ==
 
