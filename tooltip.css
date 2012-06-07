@@ -8,4 +8,5 @@
 	padding:4px; 
 	box-shadow:#333 1px 1px 3px; 
 	white-space:nowrap;
+	overflow:auto;
 }
