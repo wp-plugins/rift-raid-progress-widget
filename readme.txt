@@ -79,6 +79,9 @@ I'll add more when i get ask questions ^_^.
 Just install the lastest plugin, nothing special here.
 
 == Changelog ==
+**June 11, 2012 - v1.12
+- Fixed up ID Boss list
+
 **June 6, 2012 - v1.11
 - Fixed word wrap on small browser size
 

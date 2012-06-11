@@ -113,7 +113,7 @@ class Rift_Raid_Progress_Widget extends WP_Widget
 		$this->generate_image($path . 'images/ros/ros_.png', $ros, 4);
 		$this->generate_image($path . 'images/rop/rop_.png', $rotp, 4);
 		$this->generate_image($path . 'images/hk/hk_.png', $hk, 11);
-		$this->generate_image($path . 'images/id/id_.png', $id, 5);
+		$this->generate_image($path . 'images/id/id_.png', $id, 8);
 		
 		return $instance;
 	}
@@ -187,10 +187,13 @@ class Rift_Raid_Progress_Widget extends WP_Widget
 		echo '"><img src="' .plugins_url('riftprogress/images/hk/hk.png', dirname(__FILE__)) . '"\></a><br>';
 		echo '<a class="tooltip" title="';
 		echo ($id > 0) ? '<s>Warboss Drak</s><br>' : 'Warboss Drak<br>';
-		echo ($id > 1) ? '<s>Ituziel</s><br>' : 'Ituziel<br>';
-		echo ($id > 2) ? '<s>Ember Conclave</s><br>' : 'Ember Conclave<br>';
-		echo ($id > 3) ? '<s>Maklamos the Scryer</s><br>' : 'Maklamos the Scryer<br>';
-		echo ($id > 4) ? '<s>Rusila Dreadblade</s><br>' : 'Rusila Dreadblade<br>';
+		echo ($id > 1) ? '<s>Maklamos the Scryer</s><br>' : 'Maklamos the Scryer<br>';
+		echo ($id > 2) ? '<s>Rusila Dreadblade</s><br>' : 'Rusila Dreadblade<br>';
+		echo ($id > 3) ? '<s>Ituziel</s><br>' : 'Ituziel<br>';
+		echo ($id > 4) ? '<s>Ember Conclave</s><br>' : 'Ember Conclave<br>';
+		echo ($id > 5) ? '<s>Laethys</s><br>' : 'Laethys<br>';
+		echo ($id > 6) ? '<s>Dragon Eggs</s><br>' : 'Dragon Eggs<br>';
+		echo ($id > 7) ? '<s>Maelforge</s><br>' : 'Maelforge<br>';
 		echo '"><img src="' .plugins_url('riftprogress/images/id/id.png', dirname(__FILE__)) . '"\></a><br></center>';
 		
 		echo $after_widget;
