@@ -4,7 +4,7 @@ Plugin Name: Rift Raid Progress Widget
 Plugin URI: http://savantgaming.com/raidprogress
 Description: Wordpress widget plugin that shows the current progress of your guilds raids for rift
 Author: Benjamin Evenson
-Version: 1.1
+Version: 1.2
 Author URI: http://savantgaming.com
 
 -------------------------------------------------------------------
@@ -65,7 +65,7 @@ class Rift_Raid_Progress_Widget extends WP_Widget
      */
 	public function form($instance)
 	{
-		$instance = wp_parse_args( (array) $instance, array( 'title' => 'Raid Progress', 'dh' => '0', 'gp' => '0', 'gsb' => '0', 'ros' => '0', 'rotp' => '0', 'hk' => '0', 'id' => '0') );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => 'Raid Progress', 'dh' => '0', 'gp' => '0', 'gsb' => '0', 'ros' => '0', 'rotp' => '0', 'hk' => '0', 'pf' => '0', 'id' => '0') );
 		$title = $instance['title'];
 		$dh = $instance['dh'];
 		$gp = $instance['gp'];
@@ -73,6 +73,7 @@ class Rift_Raid_Progress_Widget extends WP_Widget
 		$ros = $instance['ros'];
 		$rotp = $instance['rotp'];
 		$hk = $instance['hk'];
+		$pf = $instance['pf'];
 		$id = $instance['id'];
 	?>
 		<p><label for="<?php echo $this->get_field_id('title'); ?>">Title: <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo attribute_escape($title); ?>" /></label></p>
@@ -82,6 +83,7 @@ class Rift_Raid_Progress_Widget extends WP_Widget
 		<p><label for="<?php echo $this->get_field_id('ros'); ?>">ROS(Out of 4): <input class="widefat" id="<?php echo $this->get_field_id('ros'); ?>" name="<?php echo $this->get_field_name('ros'); ?>" type="text" value="<?php echo attribute_escape($ros); ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('rotp'); ?>">ROTP(Out of 4): <input class="widefat" id="<?php echo $this->get_field_id('rotp'); ?>" name="<?php echo $this->get_field_name('rotp'); ?>" type="text" value="<?php echo attribute_escape($rotp); ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('hk'); ?>">HK(Out of 11): <input class="widefat" id="<?php echo $this->get_field_id('hk'); ?>" name="<?php echo $this->get_field_name('hk'); ?>" type="text" value="<?php echo attribute_escape($hk); ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('pf'); ?>">PF(Out of 4): <input class="widefat" id="<?php echo $this->get_field_id('pf'); ?>" name="<?php echo $this->get_field_name('pf'); ?>" type="text" value="<?php echo attribute_escape($pf); ?>" /></label></p>
 		<p><label for="<?php echo $this->get_field_id('id'); ?>">ID(Out of 5): <input class="widefat" id="<?php echo $this->get_field_id('id'); ?>" name="<?php echo $this->get_field_name('id'); ?>" type="text" value="<?php echo attribute_escape($id); ?>" /></label></p>
 	<?php
 	}
@@ -102,6 +104,7 @@ class Rift_Raid_Progress_Widget extends WP_Widget
 		$ros = $instance['ros'] = $new_instance['ros'];
 		$rotp = $instance['rotp'] = $new_instance['rotp'];
 		$hk = $instance['hk'] = $new_instance['hk'];
+		$pf = $instance['pf'] = $new_instance['pf'];
 		$id = $instance['id'] = $new_instance['id'];
 		
 		$path = plugin_dir_path(__FILE__);
@@ -113,6 +116,7 @@ class Rift_Raid_Progress_Widget extends WP_Widget
 		$this->generate_image($path . 'images/ros/ros_.png', $ros, 4);
 		$this->generate_image($path . 'images/rop/rop_.png', $rotp, 4);
 		$this->generate_image($path . 'images/hk/hk_.png', $hk, 11);
+		$this->generate_image($path . 'images/pf/pf_.png', $pf, 4);
 		$this->generate_image($path . 'images/id/id_.png', $id, 8);
 		
 		return $instance;
@@ -134,6 +138,7 @@ class Rift_Raid_Progress_Widget extends WP_Widget
 		$ros = $instance['ros'];
 		$rotp = $instance['rotp'];
 		$hk = $instance['hk'];
+		$pf = $instance['pf'];
 		$id = $instance['id'];
 			
 		
@@ -185,6 +190,12 @@ class Rift_Raid_Progress_Widget extends WP_Widget
 		echo ($hk > 9) ? '<s>Inwar Darktide</s><br>' : 'Inwar Darktide<br>';
 		echo ($hk > 10) ? '<s>Lord Jornaru and Akylios</s><br>' : 'Lord Jornaru and Akylios<br>';
 		echo '"><img src="' .plugins_url('riftprogress/images/hk/hk.png', dirname(__FILE__)) . '"\></a><br>';
+		echo '<a class="tooltip" title="';
+		echo ($pf > 0) ? '<s>Grandmaster Atrophinius</s><br>' : 'Grandmaster Atrophinius<br>';
+		echo ($pf > 1) ? '<s>Swarmlord Khargroth</s><br>' : 'Swarmlord Khargroth<br>';
+		echo ($pf > 2) ? '<s>Alltha the Reaper</s><br>' : 'Alltha the Reaper<br>';
+		echo ($pf > 3) ? '<s>Faelord Twyl</s><br>' : 'Faelord Twyl<br>';
+		echo '"><img src="' .plugins_url('riftprogress/images/pf/pf.png', dirname(__FILE__)) . '"\></a><br>';
 		echo '<a class="tooltip" title="';
 		echo ($id > 0) ? '<s>Warboss Drak</s><br>' : 'Warboss Drak<br>';
 		echo ($id > 1) ? '<s>Maklamos the Scryer</s><br>' : 'Maklamos the Scryer<br>';

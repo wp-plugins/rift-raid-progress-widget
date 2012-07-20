@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: admin, raid, rift, progress, widget
 Requires at least: 2.6
 Tested up to: 3.3.2
-Stable tag: 1.11
+Stable tag: 1.2
 License: The MIT License
 License URI: http://www.opensource.org/licenses/mit-license.php
 
@@ -79,6 +79,9 @@ I'll add more when i get ask questions ^_^.
 Just install the lastest plugin, nothing special here.
 
 == Changelog ==
+**July 20, 2012 - v1.2
+- Added Primeval Feast
+
 **June 11, 2012 - v1.12
 - Fixed up ID Boss list
 
